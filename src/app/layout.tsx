@@ -54,7 +54,7 @@ export default function RootLayout({
         {/* Material Symbols Outlined */}
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${playfair.variable} ${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-slate-50 text-slate-900`}>
+      <body className={`${playfair.variable} ${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-slate-50 text-slate-900 overflow-x-hidden w-full`}>
         <ToastProvider>{children}</ToastProvider>
         <Script
           src={
