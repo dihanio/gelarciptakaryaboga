@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { ArrowRight, Calendar, User, FileText } from 'lucide-react';
 import { News } from '@/models/News';
 import type { INews } from '@/types';
 import { mockNews } from '@/lib/mockData';
