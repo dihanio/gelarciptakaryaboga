@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  /* Custom Fonts */
+  --font-headline-md: 'Playfair Display', serif;
+  --font-body-md: 'Geist', sans-serif;
+  --font-display-lg-mobile: 'Playfair Display', serif;
+  --font-headline-lg: 'Playfair Display', serif;
+  --font-display-lg: 'Playfair Display', serif;
+  --font-body-lg: 'Geist', sans-serif;
+  --font-label-caps: 'Geist', sans-serif;
+
+  /* Typography / Font Size */
+  /* Format: font-size, line-height */
+  /* Note: font-weights are handled via standard Tailwind classes like font-semibold, but we'll map the exact specs in our component classes if needed, or define custom text utilities in layer utilities */
+
+  /* Gelar Cipta Custom Colors */
+  --color-tertiary-fixed-dim: #cac6c3;
+  --color-secondary-container: #5c4610;
+  --color-on-tertiary: #32302f;
+  --color-error: #ffb4ab;
+  --color-primary-container: #0b0b0b;
+  --color-inverse-primary: #5f5e5e;
+  --color-background: #141313;
+  --color-on-secondary-fixed: #261a00;
+  --color-inverse-on-surface: #313030;
+  --color-tertiary: #cac6c3;
+  --color-tertiary-container: #0c0b0a;
+  --color-surface-dim: #141313;
+  --color-surface-tint: #c9c6c5;
+  --color-on-tertiary-container: #7c7977;
+  --color-on-surface: #e5e2e1;
+  --color-inverse-surface: #e5e2e1;
+  --color-deep-espresso: #1A100C;
+  --color-warm-mocha: #6B4632;
+  --color-on-tertiary-fixed-variant: #484645;
+  --color-secondary: #e3c281;
+  --color-on-tertiary-fixed: #1d1b1a;
+  --color-on-primary-fixed-variant: #474646;
+  --color-tertiary-fixed: #e6e1df;
+  --color-surface-container-highest: #353434;
+  --color-surface-bright: #3a3939;
+  --color-secondary-fixed-dim: #e3c281;
+  --color-surface-container-low: #1c1b1b;
+  --color-on-secondary: #402d00;
+  --color-surface-container-high: #2b2a2a;
+  --color-ivory-cream: #F5EBDD;
+  --color-primary-fixed: #e5e2e1;
+  --color-on-background: #e5e2e1;
+  --color-surface-variant: #353434;
+  --color-dark-chocolate: #24150F;
+  --color-on-error: #690005;
+  --color-secondary-fixed: #ffdf9f;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-secondary-fixed-variant: #5a430e;
+  --color-primary: #c9c6c5;
+  --color-primary-fixed-dim: #c9c6c5;
+  --color-on-primary-container: #7b7979;
+  --color-on-error-container: #ffdad6;
+  --color-surface: #141313;
+  --color-surface-container: #201f1f;
+  --color-on-primary: #313030;
+  --color-on-secondary-container: #d4b474;
+  --color-outline-variant: #444748;
+  --color-outline: #8e9192;
+  --color-on-surface-variant: #c4c7c7;
+  --color-error-container: #93000a;
+
+  /* Custom Spacing */
+  --spacing-section-gap: 120px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 24px;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  /* Admin Theme (Default) */
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500 selection:text-white;
+  }
+}
+
+@layer utilities {
+  /* Public Luxury Theme Wrapper */
+  .public-theme {
+    @apply bg-background text-on-surface font-body-md selection:bg-secondary selection:text-dark-chocolate min-h-screen flex flex-col;
+  }
+
+  /* Font classes (for sizes) based on Tailwind v4 standards, mapped from the user's config */
+  .text-headline-md {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .text-body-md {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .text-display-lg-mobile {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  .text-headline-lg {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 600;
+  }
+  .text-display-lg {
+    font-size: 84px;
+    line-height: 92px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .text-body-lg {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .text-label-caps {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-600 to-amber-500;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-sm;
+  }
+
+  .glass-dark {
+    @apply bg-slate-900/80 backdrop-blur-md border border-slate-800/50 shadow-md;
+  }
+  
+  /* Luxury specific classes */
+  .glass-panel {
+    background: rgba(14, 14, 14, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(245, 235, 221, 0.1);
+  }
+
+  .editorial-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { 
+    display: none; 
+  }
+  .no-scrollbar { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: reveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
