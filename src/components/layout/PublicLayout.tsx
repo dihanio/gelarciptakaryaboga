@@ -17,7 +17,7 @@ export const PublicLayout: React.FC<PublicLayoutProps> = ({ children, settings }
         navItems={settings?.navigation}
       />
 
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 w-full max-w-[100vw] overflow-x-hidden">{children}</main>
 
       <Footer
         siteName={settings?.siteName}

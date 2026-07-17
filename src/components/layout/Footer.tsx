@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({
     socialMedia?.website;
 
   return (
-    <footer className="bg-surface-container-lowest border-t border-ivory-cream/10 w-full py-14 mt-auto">
+    <footer className="bg-surface-container-lowest border-t border-ivory-cream/10 w-full max-w-[100vw] overflow-hidden py-14 mt-auto">
       {/* Top Row */}
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
         {/* Brand */}
