@@ -45,7 +45,7 @@ export const Navbar: React.FC<{ siteName?: string; logo?: string; navItems?: Nav
     <nav
       aria-label="Main Navigation"
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-500',
+        'fixed top-0 w-full max-w-[100vw] z-50 transition-all duration-500',
         isScrolled
           ? 'bg-background/85 backdrop-blur-xl border-b border-ivory-cream/10 py-3.5 md:py-4 shadow-2xl shadow-black/40'
           : 'bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm border-b border-ivory-cream/5 py-4 md:py-6'

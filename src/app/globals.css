@@ -79,19 +79,19 @@
 
 @layer base {
   html {
-    @apply scroll-smooth antialiased overflow-x-hidden;
+    @apply scroll-smooth antialiased overflow-x-hidden max-w-[100vw];
   }
 
   /* Admin Theme (Default) */
   body {
-    @apply bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden w-full;
+    @apply bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden max-w-[100vw];
   }
 }
 
 @layer utilities {
   /* Public Luxury Theme Wrapper */
   .public-theme {
-    @apply bg-background text-on-surface font-body-md selection:bg-secondary selection:text-dark-chocolate min-h-screen flex flex-col overflow-x-hidden w-full;
+    @apply bg-background text-on-surface font-body-md selection:bg-secondary selection:text-dark-chocolate min-h-screen flex flex-col overflow-x-hidden max-w-[100vw];
   }
 
   /* Font classes (for sizes) based on Tailwind v4 standards, mapped from the user's config */
